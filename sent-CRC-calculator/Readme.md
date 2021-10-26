@@ -10,8 +10,8 @@ Data is transmitted in units of 4 bits (1 nibble) for which the interval between
 
 ### Frame Examples:
 
-![Alt text](sent-CRC-calculator/images/sampleFrame-1.png?raw=true "Sample Frame 1")
-![Alt text](sent-CRC-calculator/images/sampleFrame-2.png?raw=true "Sample Frame 2")
+![Alt text](images/sampleFrame-1.png?raw=true "Sample Frame 1")
+![Alt text](images/sampleFrame-2.png?raw=true "Sample Frame 2")
 
 ### Results:
 The same frame was introduced into the main program to calculate its CRC. The result is the same.
