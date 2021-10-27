@@ -14,7 +14,9 @@ Data is transmitted in units of 4 bits (1 nibble) for which the interval between
 ![Alt text](images/sampleFrame-2.png?raw=true "Sample Frame 2")
 
 ### Results:
-The same frame was introduced into the main program to calculate its CRC. The result is the same.
+The same frame was introduced into the main program to calculate its CRC. The result is the same as expected.
+
+![Alt text](images/resultados.PNG?raw=true "Execution Results")
 
 ## Compilation
 This function was programmed in C. All you have to do is compile it with GCC from the Linux Console or use an IDE (Eclipse for example) and a GCC toolchain, (such as MinGW).
@@ -22,3 +24,5 @@ This function was programmed in C. All you have to do is compile it with GCC fro
 `
 gcc -o sent-CRC-calc src/main.c
 `
+
+You can modify as you want. You can use the method _calculateCRC(uint8_t Data, int length)_ to calculate the CRC in your receiver microcontroller. You can also change the _main()_ and introduce your own frames to test them. Be creative!
