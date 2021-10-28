@@ -1,0 +1,117 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ch0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ch0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ch0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ch0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ch0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ch0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ch0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ch0[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ch0[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ch0[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ch0[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ch0[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_CS_N",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SADDR",
+					"strict" : false
+				},
+				{
+					"name" : "SENT",
+					"strict" : false
+				},
+				{
+					"name" : "LED[0]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[1]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[2]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[3]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[4]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[5]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[6]",
+					"strict" : false
+				},
+				{
+					"name" : "LED[7]",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ADC_SDAT",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
