@@ -24,7 +24,7 @@
 
 # Need to keep all HDL files
 # *.vhd
-# *.v
+*.v
 
 # ignore Quartus II generated files
 *_generation_script*
