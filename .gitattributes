@@ -22,4 +22,3 @@
 *.sv linguist-detectable=false
 *.v linguist-detectable=false
 *.tcl linguist-detectable=false
-*.h linguist-detectable=false
