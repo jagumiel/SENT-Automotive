@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ADC-to-SENT
-Thu Oct 28 15:57:25 2021
+Tue Nov 02 11:06:53 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -53,13 +53,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Oct 28 15:57:25 2021       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 02 11:06:53 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ADC-to-SENT                                 ;
 ; Top-level Entity Name           ; ADCtoSENT                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 148                                         ;
+; Total registers                 ; 159                                         ;
 ; Total pins                      ; 27                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -81,7 +81,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                                          ; 5CSEBA6U23I7       ;                    ;
 ; Top-level entity name                                                           ; ADCtoSENT          ; ADC-to-SENT        ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
-; Use smart compilation                                                           ; Off                ; Off                ;
+; Use smart compilation                                                           ; On                 ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
 ; Enable compact report table                                                     ; Off                ; Off                ;
 ; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
@@ -194,25 +194,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 117         ;
+; Estimate of Logic utilization (ALMs needed) ; 123         ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 180         ;
-;     -- 7 input functions                    ; 1           ;
-;     -- 6 input functions                    ; 46          ;
-;     -- 5 input functions                    ; 25          ;
-;     -- 4 input functions                    ; 24          ;
-;     -- <=3 input functions                  ; 84          ;
+; Combinational ALUT usage for logic          ; 196         ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 44          ;
+;     -- 5 input functions                    ; 31          ;
+;     -- 4 input functions                    ; 25          ;
+;     -- <=3 input functions                  ; 96          ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 148         ;
+; Dedicated logic registers                   ; 159         ;
 ;                                             ;             ;
 ; I/O pins                                    ; 27          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; CLOCK~input ;
-; Maximum fan-out                             ; 148         ;
-; Total fan-out                               ; 1246        ;
-; Average fan-out                             ; 3.26        ;
+; Maximum fan-out                             ; 159         ;
+; Total fan-out                               ; 1321        ;
+; Average fan-out                             ; 3.23        ;
 +---------------------------------------------+-------------+
 
 
@@ -221,7 +221,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------+--------------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Entity Name              ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------+--------------------------+--------------+
-; |ADCtoSENT                                   ; 180 (120)           ; 148 (75)                  ; 0                 ; 0          ; 27   ; 0            ; |ADCtoSENT                                                                                    ; ADCtoSENT                ; work         ;
+; |ADCtoSENT                                   ; 196 (136)           ; 159 (86)                  ; 0                 ; 0          ; 27   ; 0            ; |ADCtoSENT                                                                                    ; ADCtoSENT                ; work         ;
 ;    |adc_control:u0|                          ; 60 (0)              ; 73 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |ADCtoSENT|adc_control:u0                                                                     ; adc_control              ; adc_control  ;
 ;       |adc_control_adc_mega_0:adc_mega_0|    ; 60 (2)              ; 73 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0                                   ; adc_control_adc_mega_0   ; adc_control  ;
 ;          |altera_up_avalon_adv_adc:ADC_CTRL| ; 58 (58)             ; 60 (60)                   ; 0                 ; 0          ; 0    ; 0            ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL ; altera_up_avalon_adv_adc ; adc_control  ;
@@ -311,12 +311,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 148   ;
-; Number of registers using Synchronous Clear  ; 79    ;
-; Number of registers using Synchronous Load   ; 18    ;
+; Total registers                              ; 159   ;
+; Number of registers using Synchronous Clear  ; 76    ;
+; Number of registers using Synchronous Load   ; 16    ;
 ; Number of registers using Asynchronous Clear ; 9     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 107   ;
+; Number of registers using Clock Enable       ; 119   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -329,7 +329,7 @@ Encoding Type:  One-Hot
 ; adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[2] ; 2       ;
 ; adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[1] ; 2       ;
 ; adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[0] ; 2       ;
-; j[3]                                                                                          ; 6       ;
+; j[3]                                                                                          ; 10      ;
 ; Total number of inverted registers = 4                                                        ;         ;
 +-----------------------------------------------------------------------------------------------+---------+
 
@@ -339,19 +339,20 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|CH0[11]                                             ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[4]        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|sclk_counter[0]   ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|reading0[1]       ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ADCtoSENT|nibbleCnt[1]                                                                                         ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|CH0[8]                                              ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[3]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|sclk_counter[3]   ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|reading0[3]       ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ADCtoSENT|nibbleCnt[0]                                                                                         ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|dout_shift_reg[8] ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ADCtoSENT|calculatedCRC[3]                                                                                     ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |ADCtoSENT|calculatedCRC[2]                                                                                     ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 0 LEs                ; 22 LEs                 ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|dout_shift_reg[6] ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[9]  ;
-; 10:1               ; 10 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |ADCtoSENT|clkCnt[5]                                                                                            ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ADCtoSENT|nibble[0]                                                                                            ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|din_shift_reg[8]  ;
+; 10:1               ; 10 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |ADCtoSENT|clkCnt[4]                                                                                            ;
 ; 10:1               ; 6 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |ADCtoSENT|tickCnt[4]                                                                                           ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[1]        ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |ADCtoSENT|Mux0                                                                                                 ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |ADCtoSENT|adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL|counter[0]        ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |ADCtoSENT|Mux7                                                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------+
 
 
@@ -405,32 +406,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 148                         ;
+; arriav_ff             ; 159                         ;
 ;     CLR               ; 9                           ;
-;     ENA               ; 33                          ;
-;     ENA SCLR          ; 72                          ;
-;     ENA SLD           ; 2                           ;
-;     SCLR              ; 6                           ;
+;     ENA               ; 49                          ;
+;     ENA SCLR          ; 70                          ;
+;     SCLR              ; 5                           ;
 ;     SCLR SLD          ; 1                           ;
 ;     SLD               ; 15                          ;
 ;     plain             ; 10                          ;
-; arriav_lcell_comb     ; 181                         ;
+; arriav_lcell_comb     ; 197                         ;
 ;     arith             ; 56                          ;
 ;         1 data inputs ; 56                          ;
-;     extend            ; 1                           ;
-;         7 data inputs ; 1                           ;
-;     normal            ; 124                         ;
+;     normal            ; 141                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 9                           ;
-;         4 data inputs ; 24                          ;
-;         5 data inputs ; 25                          ;
-;         6 data inputs ; 46                          ;
+;         2 data inputs ; 22                          ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 25                          ;
+;         5 data inputs ; 31                          ;
+;         6 data inputs ; 44                          ;
 ; boundary_port         ; 27                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.40                        ;
-; Average LUT depth     ; 2.16                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.23                        ;
 +-----------------------+-----------------------------+
 
 
@@ -449,22 +447,22 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Thu Oct 28 15:57:08 2021
+    Info: Processing started: Tue Nov 02 11:06:33 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ADC-to-SENT -c ADC-to-SENT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12248): Elaborating Platform Designer system entity "adc_control.qsys"
-Info (12250): 2021.10.28.15:57:18 Progress: Loading ADC-to-SENT/adc_control.qsys
-Info (12250): 2021.10.28.15:57:18 Progress: Reading input file
-Info (12250): 2021.10.28.15:57:18 Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 18.0]
-Info (12250): 2021.10.28.15:57:19 Progress: Parameterizing module adc_mega_0
-Info (12250): 2021.10.28.15:57:19 Progress: Building connections
-Info (12250): 2021.10.28.15:57:19 Progress: Parameterizing connections
-Info (12250): 2021.10.28.15:57:19 Progress: Validating
-Info (12250): 2021.10.28.15:57:19 Progress: Done reading input file
+Info (12250): 2021.11.02.11:06:44 Progress: Loading ADC-to-SENT/adc_control.qsys
+Info (12250): 2021.11.02.11:06:45 Progress: Reading input file
+Info (12250): 2021.11.02.11:06:45 Progress: Adding adc_mega_0 [altera_up_avalon_adc_mega 18.0]
+Info (12250): 2021.11.02.11:06:46 Progress: Parameterizing module adc_mega_0
+Info (12250): 2021.11.02.11:06:46 Progress: Building connections
+Info (12250): 2021.11.02.11:06:46 Progress: Parameterizing connections
+Info (12250): 2021.11.02.11:06:46 Progress: Validating
+Info (12250): 2021.11.02.11:06:46 Progress: Done reading input file
 Info (12250): Adc_control: Generating adc_control "adc_control" for QUARTUS_SYNTH
 Info (12250): Adc_mega_0: Starting Generation of ADC Controller for DE-series Board
-Info (12250): Adc_mega_0: C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0002_sopcgen/adc_control_adc_mega_0.v
+Info (12250): Adc_mega_0: C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0002_sopcgen/adc_control_adc_mega_0.v
 Info (12250): Adc_mega_0: "adc_control" instantiated altera_up_avalon_adc_mega "adc_mega_0"
 Info (12250): Adc_control: Done "adc_control" with 2 modules, 3 files
 Info (12249): Finished elaborating Platform Designer system entity "adc_control.qsys"
@@ -478,8 +476,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/a
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/adc_control/submodules/altera_up_avalon_adv_adc.v
     Info (12023): Found entity 1: altera_up_avalon_adv_adc File: C:/Users/jagumiel/Documents/Quartus/ADC-to-SENT/db/ip/adc_control/submodules/altera_up_avalon_adv_adc.v Line: 23
 Info (12127): Elaborating entity "ADCtoSENT" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ADCtoSENT.vhd(62): object "nibble" assigned a value but never read File: C:/Users/jagumiel/Documents/Quartus/ADC-to-SENT/ADCtoSENT.vhd Line: 62
-Info (12128): Elaborating entity "adc_control" for hierarchy "adc_control:u0" File: C:/Users/jagumiel/Documents/Quartus/ADC-to-SENT/ADCtoSENT.vhd Line: 314
+Warning (10036): Verilog HDL or VHDL warning at ADCtoSENT.vhd(72): object "crcOpDone" assigned a value but never read File: C:/Users/jagumiel/Documents/Quartus/ADC-to-SENT/ADCtoSENT.vhd Line: 72
+Info (12128): Elaborating entity "adc_control" for hierarchy "adc_control:u0" File: C:/Users/jagumiel/Documents/Quartus/ADC-to-SENT/ADCtoSENT.vhd Line: 327
 Info (12128): Elaborating entity "adc_control_adc_mega_0" for hierarchy "adc_control:u0|adc_control_adc_mega_0:adc_mega_0" File: C:/Users/jagumiel/Documents/Quartus/ADC-to-SENT/db/ip/adc_control/adc_control.v Line: 45
 Info (12128): Elaborating entity "altera_up_avalon_adv_adc" for hierarchy "adc_control:u0|adc_control_adc_mega_0:adc_mega_0|altera_up_avalon_adv_adc:ADC_CTRL" File: C:/Users/jagumiel/Documents/Quartus/ADC-to-SENT/db/ip/adc_control/submodules/adc_control_adc_mega_0.v Line: 58
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
@@ -487,14 +485,14 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 12 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 255 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 276 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 24 output pins
-    Info (21061): Implemented 228 logic cells
+    Info (21061): Implemented 249 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4903 megabytes
-    Info: Processing ended: Thu Oct 28 15:57:25 2021
-    Info: Elapsed time: 00:00:17
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Peak virtual memory: 4910 megabytes
+    Info: Processing ended: Tue Nov 02 11:06:53 2021
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:35
 
 

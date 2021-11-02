@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2021.10.28.15:57:23"
+ date="2021.11.02.11:06:50"
  outputDirectory="C:/Users/jagumiel/Documents/Quartus/ADC-to-SENT/db/ip/adc_control/">
  <perimeter>
   <parameter
@@ -85,13 +85,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="adc_control:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEBA6U23I7,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1635429440,AUTO_UNIQUE_ID=(altera_up_avalon_adc_mega:18.0:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone V,board=DE10-Nano,board_rev=Autodetect,max10plldivby=1,max10pllmultby=1,numch=0,numch_=1,sclk_freq=3.2,sys_clk_freq=50,tsclk=16)"
+   parameterizationKey="adc_control:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=5CSEBA6U23I7,AUTO_DEVICE_FAMILY=Cyclone V,AUTO_DEVICE_SPEEDGRADE=7,AUTO_GENERATION_ID=1635847607,AUTO_UNIQUE_ID=(altera_up_avalon_adc_mega:18.0:AUTO_CLK_CLOCK_RATE=0,AUTO_DEVICE_FAMILY=Cyclone V,board=DE10-Nano,board_rev=Autodetect,max10plldivby=1,max10pllmultby=1,numch=0,numch_=1,sclk_freq=3.2,sys_clk_freq=50,tsclk=16)"
    instancePathKey="adc_control"
    kind="adc_control"
    version="1.0"
    name="adc_control">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1635429440" />
+  <parameter name="AUTO_GENERATION_ID" value="1635847607" />
   <parameter name="AUTO_DEVICE" value="5CSEBA6U23I7" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone V" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -138,13 +138,13 @@
    <message level="Debug" culprit="adc_control"><![CDATA["<b>adc_control</b>" reuses <b>altera_up_avalon_adc_mega</b> "<b>submodules/adc_control_adc_mega_0</b>"]]></message>
    <message level="Debug" culprit="adc_control">queue size: 0 starting:altera_up_avalon_adc_mega "submodules/adc_control_adc_mega_0"</message>
    <message level="Info" culprit="adc_mega_0">Starting Generation of ADC Controller for DE-series Board</message>
-   <message level="Info" culprit="adc_mega_0">C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0002_sopcgen/adc_control_adc_mega_0.v</message>
+   <message level="Info" culprit="adc_mega_0">C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0002_sopcgen/adc_control_adc_mega_0.v</message>
    <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
-   <message level="Debug">Command: C:/intelfpga_lite/20.1/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0002_sopcgen/adc_control_adc_mega_0.v --source=C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v --source=C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0002_sopcgen/adc_control_adc_mega_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0003_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
-   <message level="Debug">Command took 0.710s</message>
+   <message level="Debug">Command: C:/intelfpga_lite/20.1/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0002_sopcgen/adc_control_adc_mega_0.v --source=C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v --source=C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0002_sopcgen/adc_control_adc_mega_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0003_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 0.690s</message>
    <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
-   <message level="Debug">Command: C:/intelfpga_lite/20.1/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:\Users\jagumiel\AppData\Local\Temp\alt8928_7588929177088875236.dir\0002_sopcgen\adc_control_adc_mega_0.v --source=C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v --source=C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0002_sopcgen/adc_control_adc_mega_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0004_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=adc_control_adc_mega_0 "--set=HDL_INTERFACE_INSTANCE_PARAMETERS=board=S\"DE10-Nano\";board_rev=S\"Autodetect\";tsclk=D\"16\";numch=D\"0\";max10pllmultby=D\"1\";max10plldivby=D\"1\";" --ini=disable_check_quartus_compatibility_qsys_only=on</message>
-   <message level="Debug">Command took 0.700s</message>
+   <message level="Debug">Command: C:/intelfpga_lite/20.1/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:\Users\jagumiel\AppData\Local\Temp\alt8933_4677469877830512396.dir\0002_sopcgen\adc_control_adc_mega_0.v --source=C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v --source=C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0002_sopcgen/adc_control_adc_mega_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0004_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=adc_control_adc_mega_0 "--set=HDL_INTERFACE_INSTANCE_PARAMETERS=board=S\"DE10-Nano\";board_rev=S\"Autodetect\";tsclk=D\"16\";numch=D\"0\";max10pllmultby=D\"1\";max10plldivby=D\"1\";" --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 0.682s</message>
    <message level="Info" culprit="adc_mega_0"><![CDATA["<b>adc_control</b>" instantiated <b>altera_up_avalon_adc_mega</b> "<b>adc_mega_0</b>"]]></message>
   </messages>
  </entity>
@@ -186,13 +186,13 @@
   <messages>
    <message level="Debug" culprit="adc_control">queue size: 0 starting:altera_up_avalon_adc_mega "submodules/adc_control_adc_mega_0"</message>
    <message level="Info" culprit="adc_mega_0">Starting Generation of ADC Controller for DE-series Board</message>
-   <message level="Info" culprit="adc_mega_0">C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0002_sopcgen/adc_control_adc_mega_0.v</message>
+   <message level="Info" culprit="adc_mega_0">C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0002_sopcgen/adc_control_adc_mega_0.v</message>
    <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
-   <message level="Debug">Command: C:/intelfpga_lite/20.1/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0002_sopcgen/adc_control_adc_mega_0.v --source=C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v --source=C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0002_sopcgen/adc_control_adc_mega_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0003_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
-   <message level="Debug">Command took 0.710s</message>
+   <message level="Debug">Command: C:/intelfpga_lite/20.1/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0002_sopcgen/adc_control_adc_mega_0.v --source=C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v --source=C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0002_sopcgen/adc_control_adc_mega_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0003_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 0.690s</message>
    <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
-   <message level="Debug">Command: C:/intelfpga_lite/20.1/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:\Users\jagumiel\AppData\Local\Temp\alt8928_7588929177088875236.dir\0002_sopcgen\adc_control_adc_mega_0.v --source=C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v --source=C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0002_sopcgen/adc_control_adc_mega_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/jagumiel/AppData/Local/Temp/alt8928_7588929177088875236.dir/0004_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=adc_control_adc_mega_0 "--set=HDL_INTERFACE_INSTANCE_PARAMETERS=board=S\"DE10-Nano\";board_rev=S\"Autodetect\";tsclk=D\"16\";numch=D\"0\";max10pllmultby=D\"1\";max10plldivby=D\"1\";" --ini=disable_check_quartus_compatibility_qsys_only=on</message>
-   <message level="Debug">Command took 0.700s</message>
+   <message level="Debug">Command: C:/intelfpga_lite/20.1/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=C:\Users\jagumiel\AppData\Local\Temp\alt8933_4677469877830512396.dir\0002_sopcgen\adc_control_adc_mega_0.v --source=C:/intelfpga_lite/20.1/ip/altera/university_program/input_output/altera_up_avalon_adc/hdl/altera_up_avalon_adv_adc.v --source=C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0002_sopcgen/adc_control_adc_mega_0.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/jagumiel/AppData/Local/Temp/alt8933_4677469877830512396.dir/0004_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=adc_control_adc_mega_0 "--set=HDL_INTERFACE_INSTANCE_PARAMETERS=board=S\"DE10-Nano\";board_rev=S\"Autodetect\";tsclk=D\"16\";numch=D\"0\";max10pllmultby=D\"1\";max10plldivby=D\"1\";" --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 0.682s</message>
    <message level="Info" culprit="adc_mega_0"><![CDATA["<b>adc_control</b>" instantiated <b>altera_up_avalon_adc_mega</b> "<b>adc_mega_0</b>"]]></message>
   </messages>
  </entity>

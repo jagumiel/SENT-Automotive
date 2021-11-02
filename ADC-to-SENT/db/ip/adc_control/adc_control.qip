@@ -2,7 +2,7 @@ set_global_assignment -entity "adc_control" -library "adc_control" -name IP_TOOL
 set_global_assignment -entity "adc_control" -library "adc_control" -name IP_TOOL_VERSION "20.1"
 set_global_assignment -entity "adc_control" -library "adc_control" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "adc_control" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../../adc_control.sopcinfo"]
-set_global_assignment -entity "adc_control" -library "adc_control" -name SLD_INFO "QSYS_NAME adc_control HAS_SOPCINFO 1 GENERATION_ID 1635429440"
+set_global_assignment -entity "adc_control" -library "adc_control" -name SLD_INFO "QSYS_NAME adc_control HAS_SOPCINFO 1 GENERATION_ID 1635847607"
 set_global_assignment -library "adc_control" -name SLD_FILE [file join $::quartus(qip_path) "adc_control.debuginfo"]
 set_global_assignment -entity "adc_control" -library "adc_control" -name IP_TARGETED_DEVICE_FAMILY "Cyclone V"
 set_global_assignment -entity "adc_control" -library "adc_control" -name IP_GENERATED_DEVICE_FAMILY "{Cyclone V}"
@@ -14,7 +14,7 @@ set_global_assignment -entity "adc_control" -library "adc_control" -name IP_COMP
 set_global_assignment -entity "adc_control" -library "adc_control" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "adc_control" -library "adc_control" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "adc_control" -library "adc_control" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "adc_control" -library "adc_control" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYzNTQyOTQ0MA==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "adc_control" -library "adc_control" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTYzNTg0NzYwNw==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "adc_control" -library "adc_control" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "adc_control" -library "adc_control" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTRUJBNlUyM0k3::QXV0byBERVZJQ0U="
 set_global_assignment -entity "adc_control" -library "adc_control" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nw==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="

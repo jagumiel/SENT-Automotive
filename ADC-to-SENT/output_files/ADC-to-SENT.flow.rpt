@@ -1,5 +1,5 @@
 Flow report for ADC-to-SENT
-Thu Oct 28 15:58:10 2021
+Tue Nov 02 11:07:43 2021
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,15 +41,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Oct 28 15:58:04 2021       ;
+; Flow Status                     ; Successful - Tue Nov 02 11:07:37 2021       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; ADC-to-SENT                                 ;
 ; Top-level Entity Name           ; ADCtoSENT                                   ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEBA6U23I7                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 110 / 41,910 ( < 1 % )                      ;
-; Total registers                 ; 176                                         ;
+; Logic utilization (in ALMs)     ; 117 / 41,910 ( < 1 % )                      ;
+; Total registers                 ; 187                                         ;
 ; Total pins                      ; 27 / 314 ( 9 % )                            ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 5,662,720 ( 0 % )                       ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/28/2021 15:57:09 ;
+; Start date & time ; 11/02/2021 11:06:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ADC-to-SENT         ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 194042949011935.163542942805324        ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 194042949011935.163584759333264        ; --            ; --          ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 100                                    ; --            ; --          ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; -40                                    ; --            ; --          ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; ADCtoSENT   ; Top        ;
@@ -87,6 +87,7 @@ https://fpgasoftware.intel.com/eula.
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; ADCtoSENT   ; Top        ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --         ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --         ;
+; SMART_RECOMPILE                     ; On                                     ; Off           ; --          ; --         ;
 ; TOP_LEVEL_ENTITY                    ; ADCtoSENT                              ; ADC-to-SENT   ; --          ; --         ;
 +-------------------------------------+----------------------------------------+---------------+-------------+------------+
 
@@ -96,11 +97,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4903 MB             ; 00:00:34                           ;
-; Fitter               ; 00:00:31     ; 1.0                     ; 7076 MB             ; 00:01:35                           ;
+; Analysis & Synthesis ; 00:00:20     ; 1.0                     ; 4910 MB             ; 00:00:35                           ;
+; Fitter               ; 00:00:34     ; 1.0                     ; 7081 MB             ; 00:01:40                           ;
 ; Assembler            ; 00:00:06     ; 1.0                     ; 4857 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.2                     ; 5257 MB             ; 00:00:05                           ;
-; Total                ; 00:00:59     ; --                      ; --                  ; 00:02:19                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.2                     ; 5258 MB             ; 00:00:05                           ;
+; Total                ; 00:01:05     ; --                      ; --                  ; 00:02:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

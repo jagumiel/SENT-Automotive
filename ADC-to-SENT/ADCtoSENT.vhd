@@ -23,6 +23,7 @@ END ADCtoSENT;
 
 	 
 ARCHITECTURE a OF ADCtoSENT IS
+
 	component adc_control is
 		port (
 			CLOCK    : in  std_logic                     := 'X'; -- clk
@@ -46,9 +47,11 @@ ARCHITECTURE a OF ADCtoSENT IS
 	
 	----SENT Frame Generation Signals----
 	--CRC Look-Up Table:
-	type  TABLE is array (1 to 16) of std_logic_vector(3 downto 0);
+	type  TABLE is array (0 to 15) of std_logic_vector(3 downto 0);
 	constant crcLookup 	: TABLE := (x"0",x"D",x"7",x"A",x"E",x"3",x"9",x"4",x"1",x"C",x"6",x"B",x"F",x"2",x"8",x"5");
 	signal calculatedCRC : std_logic_vector(3 downto 0);
+	signal tmpCRC : std_logic_vector(3 downto 0);
+	signal miLookActual : std_logic_vector(3 downto 0);
 	--Flow Control:
 	constant tickLength	: std_logic_vector(9 downto 0):="1111101000"; --1000 ticks @ 50MHz Clk. 1 SENT tick = 20us.
 	signal busy 		: std_logic := '0';
@@ -156,7 +159,7 @@ BEGIN
 				busy<='1';
 			else
 				if(synced='0')then
-					if(tickCnt<"000100")then		--Protocol SENT: At least 5 ticks at logic '0'.
+					if(tickCnt<"000101")then		--Protocol SENT: At least 5 ticks at logic '0'.
 						dataFrame<='0';
 						if(clkCnt<tickLength)then
 							clkCnt<=clkCnt+'1';
@@ -181,7 +184,8 @@ BEGIN
 					end if;
 				else
 					if(comm_start='0')then
-						if(tickCnt<"000100")then		--Protocol SENT: At least 5 ticks at logic '0'.
+						nibble<=message(11 downto 8);
+						if(tickCnt<"000101")then		--Protocol SENT: At least 5 ticks at logic '0'.
 							dataFrame<='0';
 							if(clkCnt<tickLength)then
 								clkCnt<=clkCnt+'1';
@@ -207,7 +211,7 @@ BEGIN
 					else
 						if(sentData='0')then
 							if(nibbleCnt<"11")then
-								if(tickCnt<"000101")then		--Protocol SENT: At least 5 ticks at logic '0'. Revisa, que en otros has puesto 100.
+								if(tickCnt<"000101")then		--Protocol SENT: At least 5 ticks at logic '0'.
 									dataFrame<='0';
 									if(clkCnt<tickLength)then
 										clkCnt<=clkCnt+'1';
@@ -215,11 +219,28 @@ BEGIN
 										clkCnt<="0000000000";
 										tickCnt<=tickCnt+'1';
 									end if;
-								else
-									dataFrame<='1';
 									nibble<=message(j downto j-3);
-									tickCondition<=("00" & message(j downto j-3))+"000101"+"001100";
-									--if(tickCnt<("000101"+"001100"+ ("00" & nibble)))then	--Protocol SENT: Message is N ticks. 5+12+N. (resize(nibble,6))
+									---LO SUBO AQUI---
+									if(tickCnt="000010" and clkCnt="0000000000")then
+										--nibble<=message(j downto j-3);
+										miLookActual<=crcLookup(to_integer(unsigned(std_logic_vector(calculatedCRC))));
+										--tmpCRC<=(miLookActual xor nibble) and x"F";
+										tmpCRC<=(crcLookup(to_integer(unsigned(std_logic_vector(calculatedCRC)))) xor nibble) and x"F";
+									end if;
+
+									---FIN---
+								else
+									if(tickCnt="000111" and clkCnt="0000000000")then
+										calculatedCRC<=tmpCRC;
+										--tmpCRC<=(crcLookup(to_integer(unsigned(std_logic_vector(calculatedCRC)))) xor nibble) and x"F";
+									end if;
+									dataFrame<='1';
+									--calculatedCRC<=tmpCRC;
+									---COMENTO AQUI---
+									--nibble<=message(j downto j-3);
+									tickCondition<=("00" & message(j downto j-3))+"000101"+"001100"; --Protocol SENT: Message is N ticks. 5+12+N. (resize(nibble,6))
+									--tmpCRC<=(crcLookup(to_integer(unsigned(std_logic_vector(calculatedCRC)))) xor nibble) and x"F";
+									---FIN.---
 									if(tickCnt<tickCondition)then
 										if(clkCnt<tickLength)then
 											clkCnt<=clkCnt+'1';
@@ -228,13 +249,15 @@ BEGIN
 											tickCnt<=tickCnt+'1';
 										end if;
 									else
-										if(tickCnt=tickCondition)then
+										if(tickCnt=tickCondition)then											
+											--calculatedCRC<=tmpCRC;
 											if(j>3)then --ESTO IGUAL SE PUEDE SUBIR ARRIBA.
 												j<=j-4;
 											end if;
 											nibbleCnt<=nibbleCnt+'1';
 											tickCnt<="000000";
 											clkCnt<="0000000000";
+											--j<=11;
 										end if;
 									end if;
 								end if;
@@ -245,17 +268,10 @@ BEGIN
 							end if;
 						else
 							if(sentCRC='0')then
+								miLookActual<=crcLookup(to_integer(unsigned(std_logic_vector(calculatedCRC))));
 								dataFrame<='0';
-								--Calculate CRC
-								if (crcOpDone='0') then
-									for index in 1 to 3 loop
-										calculatedCRC<=crcLookup(to_integer(unsigned(std_logic_vector(calculatedCRC))));
-										calculatedCRC<=(calculatedCRC xor message(11 downto 8)) and x"F";
-									end loop;
-									crcOpDone<='1';
-								end if;
 								
-								if(tickCnt<"000100")then		--Protocol SENT: At least 5 ticks at logic '0'.
+								if(tickCnt<"000101")then		--Protocol SENT: At least 5 ticks at logic '0'.
 									dataFrame<='0';
 									if(clkCnt<tickLength)then
 										clkCnt<=clkCnt+'1';
@@ -265,7 +281,7 @@ BEGIN
 									end if;
 								else
 									dataFrame<='1';
-									if(tickCnt<"000100"+"001100"+calculatedCRC)then	--Protocol SENT: CRC is 12 ticks. 5+12+CRC
+									if(tickCnt<"000101"+"001100"+miLookActual)then	--Protocol SENT: CRC is 12 ticks. 5+12+CRC
 										if(clkCnt<tickLength)then
 											clkCnt<=clkCnt+'1';
 										else
@@ -280,7 +296,7 @@ BEGIN
 								end if;
 							else
 								if(finished='0')then
-									if(tickCnt<"000100")then		--Protocol SENT: At least 5 ticks at logic '0'.
+									if(tickCnt<"000101")then		--Protocol SENT: At least 5 ticks at logic '0'.
 										dataFrame<='0';
 										if(clkCnt<tickLength)then
 											clkCnt<=clkCnt+'1';
@@ -306,11 +322,8 @@ BEGIN
 			end if;
 		end if;
 	end process;
-						
-						
-
 	
-
+	
 	u0 : component adc_control
         port map (
             CLOCK    => CLOCK,		--                clk.clk
@@ -321,6 +334,8 @@ BEGIN
             ADC_DOUT => ADC_SDAT,	--                   .DOUT
             ADC_DIN  => ADC_SADDR	--                   .DIN
         );
+		  
+						
 		  
 		  
 	LED<=chan0(11 downto 4);
